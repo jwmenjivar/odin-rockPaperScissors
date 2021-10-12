@@ -66,20 +66,30 @@ function game(){
                 typocount++;
                 break;
         }
-        console.log("wins "+wincount);
-        console.log("loss "+losecount); 
-        console.log("draws "+drawcount);
-        console.log("typos " + typocount);  
+       
     }
     
     if(wincount===losecount){
-        alert("No one Wins");
+        alert(`No one Wins
+        wins +${wincount}
+        lost -${losecount} 
+        draws ${drawcount}
+        typos ${typocount} `);
+         
     }
     else if(wincount>losecount){
-        alert(`You won ${wincount} times, You're the winner`)
+        alert(`You won ${wincount} times, Felicidades! Pase por Su Tamal.
+        wins +${wincount}
+        lost -${losecount} 
+        draws ${drawcount}
+        typos ${typocount}`)
     }
-    else if (losecount<wincount){
-        alert(`Computer won ${losecount} times. You lose`)
+    else if (losecount>wincount){
+        alert(`Computer Lost ${losecount} times. You lose! You owe me a DOLLAR!
+        wins +${wincount}
+        lost -${losecount} 
+        draws ${drawcount}
+        typos ${typocount}`)
     }
 
 }
