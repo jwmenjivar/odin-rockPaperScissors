@@ -39,17 +39,48 @@ if(userSelection===computerSelection)
         return "Lose";
     }
     else{
-        alert("Type in as suggested. It is case sensitive");
-        return "none"
+        alert("Typo error, Try again as suggested");
+        return "Typo"
     }
 }
 
 function game(){
-
-    for(let i=0;i<=5; i++){
-        let winLose = playRound();
-        console.log(winLose);
+    let wincount=0;
+    let losecount=0;
+    let drawcount=0;
+    let typocount=0;
+    for(let i=0;i<5; i++){
+        let winLose=playRound();
         
+        switch(winLose){
+            case "Win":
+                wincount++;
+                break;    
+            case "Lose":
+                losecount++;
+                break;
+            case "Draw":
+                drawcount++;
+                break;
+            case "Typo":
+                typocount++;
+                break;
+        }
+        console.log("wins "+wincount);
+        console.log("loss "+losecount); 
+        console.log("draws "+drawcount);
+        console.log("typos " + typocount);  
     }
+    
+    if(wincount===losecount){
+        alert("No one Wins");
+    }
+    else if(wincount>losecount){
+        alert(`You won ${wincount} times, You're the winner`)
+    }
+    else if (losecount<wincount){
+        alert(`Computer won ${losecount} times. You lose`)
+    }
+
 }
 game();
