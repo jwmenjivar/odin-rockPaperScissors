@@ -11,7 +11,7 @@ console.log(comp);
 let computerSelection = arr[comp];
 console.log(computerSelection);
 
-let userSel = prompt("Type in Rock or Paper or Scissors", "Type exactly as suggested");
+let userSel = prompt("Type in Rock or Paper or Scissors");
 console.log(userSel);
 //I will convert any imput into something that can be compared
 function formatUserSel(arg){
