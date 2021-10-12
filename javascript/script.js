@@ -70,7 +70,7 @@ function game(){
     }
     
     if(wincount===losecount){
-        alert(`No one Wins
+        alert(`No one Wins. No tamales
         wins +${wincount}
         lost -${losecount} 
         draws ${drawcount}
@@ -85,7 +85,7 @@ function game(){
         typos ${typocount}`)
     }
     else if (losecount>wincount){
-        alert(`Computer Lost ${losecount} times. You lose! You owe me a DOLLAR!
+        alert(`Computer won ${losecount} times. You lose! You owe it a DOLLAR!
         wins +${wincount}
         lost -${losecount} 
         draws ${drawcount}
