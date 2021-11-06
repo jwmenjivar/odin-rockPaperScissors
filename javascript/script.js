@@ -1,3 +1,4 @@
+function rockPaperScisssors(){
 let userSelection;
 let wincount = 0;
 let losecount = 0;
@@ -36,7 +37,10 @@ let btn3 = document.querySelector(".scissors");
         let comp = getRandomIntInclusive(0, 2);
         console.log(comp);
     let computerSelection = arr[comp];
-        console.log("computer: "+computerSelection);
+        //console.log("computer: "+computerSelection);
+        let userwin= document.querySelector('.cpuselec');
+        userwin.textContent=`Computer selects ${computerSelection}`;
+        userwin.style.color="green"
         console.log("user: " + userSelection);
       // So far we have both user and computer selections
       //now we proceed to compare them and count who wins
@@ -87,13 +91,24 @@ console.log("draw "+ drawcount);
 function winner(){
   if(wincount===5){
     let won = document.querySelector('.result');
-    won.innerHTML="YOU WON FIVE TIMES";
+    won.innerHTML="YOU WON FIVE TIMES! PASA POR TUS TAMALES";
     won.style.color="blue";
+    btn.removeEventListener('click', rock);
+    btn2.removeEventListener('click', paper);
+    btn3.removeEventListener('click', scissors);
      ;}
    else if(losecount===5){let loses = document.querySelector('.result');
    loses.innerHTML="COMPUTER WON FIVE TIMES";
-   loses.style.color="red";
+   loses.style.color="red"; 
+   btn.removeEventListener('click', rock);
+   btn2.removeEventListener('click', paper);
+   btn3.removeEventListener('click', scissors);
 }
 }
 winner();
-  }
+ 
+}
+}
+
+rockPaperScisssors();
+
